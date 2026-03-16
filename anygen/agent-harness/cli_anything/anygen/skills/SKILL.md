@@ -59,7 +59,14 @@ Task management — create, poll, download, and run tasks.
 
 | Command | Description |
 |---------|-------------|
-
+| `create` | Create a generation task |
+| `status` | Query task status (non-blocking) |
+| `poll` | Poll task until completion (blocking) |
+| `download` | Download the generated file for a completed task |
+| `thumbnail` | Download thumbnail image for a completed task |
+| `run` | Full workflow: create, poll, download |
+| `list` | List locally cached task records |
+| `prepare` | Multi-turn requirement analysis before creating a task |
 
 
 ### File
@@ -68,7 +75,7 @@ File operations — upload reference files.
 
 | Command | Description |
 |---------|-------------|
-
+| `upload` | Upload a reference file to get a file_token |
 
 
 ### Config
@@ -77,13 +84,10 @@ Configuration management — API key and settings.
 
 | Command | Description |
 |---------|-------------|
-
-| `config-get` | Get a configuration value (or show all). |
-
-| `config-delete` | Delete a configuration value. |
-
-| `config-path` | Show the config file path. |
-
+| `set` | Set a configuration value |
+| `get` | Get a configuration value (or show all) |
+| `delete` | Delete a configuration value |
+| `path` | Show the config file path |
 
 
 ### Session
@@ -92,14 +96,10 @@ Session management — history, undo, redo.
 
 | Command | Description |
 |---------|-------------|
-
-| `session-status` | Show session status. |
-
-| `session-history` | Show command history. |
-
-| `session-undo` | Undo last command. |
-
-| `session-redo` | Redo last undone command. |
+| `status` | Show session status |
+| `history` | Show command history |
+| `undo` | Undo last command |
+| `redo` | Redo last undone command |
 
 
 

@@ -59,7 +59,10 @@ Authentication and OAuth2 setup.
 
 | Command | Description |
 |---------|-------------|
-
+| `setup` | Configure OAuth app credentials |
+| `login` | Login via OAuth2 browser flow |
+| `status` | Check authentication status |
+| `logout` | Remove saved tokens |
 
 
 ### Meeting
@@ -68,7 +71,13 @@ Meeting management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `create` | Create a new Zoom meeting |
+| `list` | List meetings |
+| `info` | Get meeting details |
+| `update` | Update a meeting |
+| `delete` | Delete a meeting |
+| `join` | Open meeting join URL in browser |
+| `start` | Open meeting start URL in browser (host only) |
 
 
 ### Participant
@@ -77,7 +86,11 @@ Participant management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Register a participant for a meeting |
+| `add-batch` | Batch register participants from a CSV file |
+| `list` | List registered participants |
+| `remove` | Cancel a participant's registration |
+| `attended` | List participants who attended a past meeting |
 
 
 ### Recording
@@ -86,6 +99,10 @@ Cloud recording management.
 
 | Command | Description |
 |---------|-------------|
+| `list` | List cloud recordings |
+| `files` | List recording files for a specific meeting |
+| `download` | Download a recording file |
+| `delete` | Delete all recordings for a meeting |
 
 
 

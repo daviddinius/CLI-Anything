@@ -59,7 +59,11 @@ Project management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `new` | Create a new OBS scene collection |
+| `open` | Open an existing project |
+| `save` | Save the current project |
+| `info` | Show project information |
+| `json` | Print raw project JSON |
 
 
 ### Scene Group
@@ -68,7 +72,11 @@ Scene management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a new scene |
+| `remove` | Remove a scene by index |
+| `duplicate` | Duplicate a scene |
+| `set-active` | Set the active scene |
+| `list` | List all scenes |
 
 
 ### Source Group
@@ -77,7 +85,12 @@ Source management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a source to a scene |
+| `remove` | Remove a source by index |
+| `duplicate` | Duplicate a source |
+| `set` | Set a source property (name, visible, locked, opacity, rotation) |
+| `transform` | Transform a source (position, size, crop, rotation) |
+| `list` | List all sources in a scene |
 
 
 ### Filter Group
@@ -86,7 +99,11 @@ Filter management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a filter to a source |
+| `remove` | Remove a filter from a source |
+| `set` | Set a filter parameter |
+| `list` | List all filters on a source |
+| `list-available` | List all available filter types |
 
 
 ### Audio Group
@@ -95,7 +112,13 @@ Audio management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a global audio source |
+| `remove` | Remove a global audio source |
+| `volume` | Set volume for an audio source (0.0-3.0) |
+| `mute` | Mute an audio source |
+| `unmute` | Unmute an audio source |
+| `monitor` | Set audio monitoring type |
+| `list` | List all audio sources |
 
 
 ### Transition Group
@@ -104,7 +127,11 @@ Transition management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a transition |
+| `remove` | Remove a transition |
+| `set-active` | Set the active transition |
+| `duration` | Set transition duration in milliseconds |
+| `list` | List all transitions |
 
 
 ### Output Group
@@ -113,7 +140,11 @@ Output/streaming/recording configuration.
 
 | Command | Description |
 |---------|-------------|
-
+| `streaming` | Configure streaming settings |
+| `recording` | Configure recording settings |
+| `settings` | Configure output settings |
+| `info` | Show current output configuration |
+| `presets` | List available encoding presets |
 
 
 ### Session
@@ -122,6 +153,10 @@ Session management commands.
 
 | Command | Description |
 |---------|-------------|
+| `status` | Show session status |
+| `undo` | Undo the last operation |
+| `redo` | Redo the last undone operation |
+| `history` | Show undo history |
 
 
 

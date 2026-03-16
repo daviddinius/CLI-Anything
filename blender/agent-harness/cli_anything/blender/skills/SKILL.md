@@ -59,7 +59,12 @@ Scene management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `new` | Create a new scene |
+| `open` | Open an existing scene |
+| `save` | Save the current scene |
+| `info` | Show scene information |
+| `profiles` | List available scene profiles |
+| `json` | Print raw scene JSON |
 
 
 ### Object Group
@@ -68,7 +73,13 @@ Scene management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a 3D primitive object |
+| `remove` | Remove an object by index |
+| `duplicate` | Duplicate an object |
+| `transform` | Transform an object (translate, rotate, scale) |
+| `set` | Set an object property (name, visible, location, rotation, scale, parent) |
+| `list` | List all objects |
+| `get` | Get detailed info about an object |
 
 
 ### Material
@@ -77,7 +88,11 @@ Material management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `create` | Create a new material |
+| `assign` | Assign a material to an object |
+| `set` | Set a material property (color, metallic, roughness, specular, alpha, etc.) |
+| `list` | List all materials |
+| `get` | Get detailed info about a material |
 
 
 ### Modifier Group
@@ -86,7 +101,12 @@ Modifier management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `list-available` | List all available modifiers |
+| `info` | Show details about a modifier |
+| `add` | Add a modifier to an object |
+| `remove` | Remove a modifier by index |
+| `set` | Set a modifier parameter |
+| `list` | List modifiers on an object |
 
 
 ### Camera
@@ -95,7 +115,10 @@ Camera management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a camera to the scene |
+| `set` | Set a camera property |
+| `set-active` | Set the active camera |
+| `list` | List all cameras |
 
 
 ### Light
@@ -104,7 +127,9 @@ Light management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a light to the scene |
+| `set` | Set a light property |
+| `list` | List all lights |
 
 
 ### Animation
@@ -113,7 +138,11 @@ Animation and keyframe commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `keyframe` | Set a keyframe on an object |
+| `remove-keyframe` | Remove a keyframe from an object |
+| `frame-range` | Set the animation frame range |
+| `fps` | Set the animation FPS |
+| `list-keyframes` | List keyframes for an object |
 
 
 ### Render Group
@@ -122,7 +151,11 @@ Render settings and output commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `settings` | Configure render settings |
+| `info` | Show current render settings |
+| `presets` | List available render presets |
+| `execute` | Render the scene (generates bpy script) |
+| `script` | Generate bpy script without rendering |
 
 
 ### Session
@@ -131,6 +164,10 @@ Session management commands.
 
 | Command | Description |
 |---------|-------------|
+| `status` | Show session status |
+| `undo` | Undo the last operation |
+| `redo` | Redo the last undone operation |
+| `history` | Show undo history |
 
 
 

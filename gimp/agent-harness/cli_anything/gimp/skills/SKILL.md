@@ -59,7 +59,12 @@ Project management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `new` | Create a new project |
+| `open` | Open an existing project |
+| `save` | Save the current project |
+| `info` | Show project information |
+| `profiles` | List available canvas profiles |
+| `json` | Print raw project JSON |
 
 
 ### Layer
@@ -68,7 +73,15 @@ Layer management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `new` | Create a new blank layer |
+| `add-from-file` | Add a layer from an image file |
+| `list` | List all layers |
+| `remove` | Remove a layer by index |
+| `duplicate` | Duplicate a layer |
+| `move` | Move a layer to a new position |
+| `set` | Set a layer property (name, opacity, visible, mode, offset_x, offset_y) |
+| `flatten` | Flatten all visible layers |
+| `merge-down` | Merge a layer with the one below it |
 
 
 ### Canvas
@@ -77,7 +90,12 @@ Canvas operations.
 
 | Command | Description |
 |---------|-------------|
-
+| `info` | Show canvas information |
+| `resize` | Resize the canvas (without scaling content) |
+| `scale` | Scale the canvas and all content proportionally |
+| `crop` | Crop the canvas to a rectangle |
+| `mode` | Set the canvas color mode |
+| `dpi` | Set the canvas DPI |
 
 
 ### Filter Group
@@ -86,7 +104,12 @@ Filter management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `list-available` | List all available filters |
+| `info` | Show details about a filter |
+| `add` | Add a filter to a layer |
+| `remove` | Remove a filter by index |
+| `set` | Set a filter parameter |
+| `list` | List filters on a layer |
 
 
 ### Media
@@ -95,7 +118,10 @@ Media file operations.
 
 | Command | Description |
 |---------|-------------|
-
+| `probe` | Analyze an image file |
+| `list` | List media files referenced in the project |
+| `check` | Check that all referenced media files exist |
+| `histogram` | Show histogram analysis of an image |
 
 
 ### Export Group
@@ -104,7 +130,9 @@ Export/render commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `presets` | List export presets |
+| `preset-info` | Show preset details |
+| `render` | Render the project to an image file |
 
 
 ### Session
@@ -113,7 +141,10 @@ Session management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `status` | Show session status |
+| `undo` | Undo the last operation |
+| `redo` | Redo the last undone operation |
+| `history` | Show undo history |
 
 
 ### Draw
@@ -122,6 +153,8 @@ Drawing operations (applied at render time).
 
 | Command | Description |
 |---------|-------------|
+| `text` | Draw text on a layer (by converting it to a text layer) |
+| `rect` | Draw a rectangle (stored as drawing operation) |
 
 
 

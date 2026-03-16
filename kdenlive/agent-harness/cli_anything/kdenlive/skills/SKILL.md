@@ -59,7 +59,12 @@ Project management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `new` | Create a new project |
+| `open` | Open an existing project |
+| `save` | Save the current project |
+| `info` | Show project information |
+| `profiles` | List available video profiles |
+| `json` | Print raw project JSON |
 
 
 ### Bin Group
@@ -68,7 +73,10 @@ Media bin management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `import` | Import a clip into the media bin |
+| `remove` | Remove a clip from the bin |
+| `list` | List all clips in the bin |
+| `get` | Get detailed clip info |
 
 
 ### Timeline
@@ -77,7 +85,14 @@ Timeline management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add-track` | Add a track to the timeline |
+| `remove-track` | Remove a track |
+| `add-clip` | Add a clip to a track |
+| `remove-clip` | Remove a clip from a track |
+| `trim` | Trim a clip's in/out points |
+| `split` | Split a clip at a time offset |
+| `move` | Move a clip to a new position |
+| `list` | List all tracks |
 
 
 ### Filter Group
@@ -86,7 +101,11 @@ Filter/effect management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a filter to a clip |
+| `remove` | Remove a filter from a clip |
+| `set` | Set a filter parameter |
+| `list` | List filters on a clip |
+| `available` | List all available filters |
 
 
 ### Transition
@@ -95,7 +114,10 @@ Transition management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a transition between tracks |
+| `remove` | Remove a transition |
+| `set` | Set a transition parameter |
+| `list` | List all transitions |
 
 
 ### Guide
@@ -104,7 +126,9 @@ Guide/marker management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a guide at a position (seconds) |
+| `remove` | Remove a guide |
+| `list` | List all guides |
 
 
 ### Export
@@ -113,7 +137,8 @@ Export and render commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `xml` | Generate Kdenlive/MLT XML |
+| `presets` | List available render presets |
 
 
 ### Session
@@ -122,6 +147,10 @@ Session management commands.
 
 | Command | Description |
 |---------|-------------|
+| `status` | Show session status |
+| `undo` | Undo the last operation |
+| `redo` | Redo the last undone operation |
+| `history` | Show undo history |
 
 
 

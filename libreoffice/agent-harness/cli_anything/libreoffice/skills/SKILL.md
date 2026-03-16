@@ -59,7 +59,12 @@ Document management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `new` | Create a new document |
+| `open` | Open an existing project file |
+| `save` | Save the current document |
+| `info` | Show document information |
+| `profiles` | List available page profiles |
+| `json` | Print raw project JSON |
 
 
 ### Writer
@@ -68,7 +73,14 @@ Writer (word processor) commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add-paragraph` | Add a paragraph to the document |
+| `add-heading` | Add a heading to the document |
+| `add-list` | Add a list to the document |
+| `add-table` | Add a table to the document |
+| `add-page-break` | Add a page break |
+| `remove` | Remove a content item by index |
+| `list` | List all content items |
+| `set-text` | Set the text of a content item |
 
 
 ### Calc
@@ -77,7 +89,12 @@ Calc (spreadsheet) commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add-sheet` | Add a new sheet |
+| `remove-sheet` | Remove a sheet by index |
+| `rename-sheet` | Rename a sheet |
+| `set-cell` | Set a cell value |
+| `get-cell` | Get a cell value |
+| `list-sheets` | List all sheets |
 
 
 ### Impress
@@ -86,7 +103,11 @@ Impress (presentation) commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add-slide` | Add a slide to the presentation |
+| `remove-slide` | Remove a slide by index |
+| `set-content` | Update a slide's title and/or content |
+| `list-slides` | List all slides |
+| `add-element` | Add an element to a slide |
 
 
 ### Style Group
@@ -95,7 +116,11 @@ Style management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `create` | Create a new style |
+| `modify` | Modify an existing style |
+| `list` | List all styles |
+| `apply` | Apply a style to a content item (Writer only) |
+| `remove` | Remove a style |
 
 
 ### Export Group
@@ -104,7 +129,9 @@ Export/render commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `presets` | List export presets |
+| `preset-info` | Show preset details |
+| `render` | Export the document to a file |
 
 
 ### Session
@@ -113,6 +140,10 @@ Session management commands.
 
 | Command | Description |
 |---------|-------------|
+| `status` | Show session status |
+| `undo` | Undo the last operation |
+| `redo` | Redo the last undone operation |
+| `history` | Show undo history |
 
 
 

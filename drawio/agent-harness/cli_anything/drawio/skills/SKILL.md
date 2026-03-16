@@ -59,7 +59,12 @@ Project management: new, open, save, info.
 
 | Command | Description |
 |---------|-------------|
-
+| `new` | Create a new blank diagram |
+| `open` | Open an existing .drawio project file |
+| `save` | Save the current project |
+| `info` | Show detailed project information |
+| `xml` | Print the raw XML of the current project |
+| `presets` | List available page size presets |
 
 
 ### Shape
@@ -68,7 +73,15 @@ Shape operations: add, remove, move, resize, style.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a shape to the diagram |
+| `remove` | Remove a shape by ID |
+| `list` | List all shapes on a page |
+| `label` | Update a shape's label text |
+| `move` | Move a shape to new coordinates |
+| `resize` | Resize a shape |
+| `style` | Set a style property on a shape |
+| `info` | Show detailed info about a shape |
+| `types` | List all available shape types |
 
 
 ### Connect
@@ -77,7 +90,12 @@ Connector operations: add, remove, style.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a connector between two shapes |
+| `remove` | Remove a connector by ID |
+| `label` | Update a connector's label |
+| `style` | Set a style property on a connector |
+| `list` | List all connectors on a page |
+| `styles` | List available edge styles |
 
 
 ### Page
@@ -86,7 +104,10 @@ Page operations: add, remove, rename, list.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a new page |
+| `remove` | Remove a page by index |
+| `rename` | Rename a page |
+| `list` | List all pages |
 
 
 ### Export
@@ -95,7 +116,8 @@ Export operations: render to PNG, PDF, SVG.
 
 | Command | Description |
 |---------|-------------|
-
+| `render` | Export the diagram to a file |
+| `formats` | List available export formats |
 
 
 ### Session
@@ -104,6 +126,11 @@ Session management: status, undo, redo.
 
 | Command | Description |
 |---------|-------------|
+| `status` | Show current session status |
+| `undo` | Undo the last operation |
+| `redo` | Redo the last undone operation |
+| `save-state` | Save session state to disk |
+| `list` | List all saved sessions |
 
 
 

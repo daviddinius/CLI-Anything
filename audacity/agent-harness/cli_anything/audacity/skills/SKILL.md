@@ -59,7 +59,12 @@ Project management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `new` | Create a new project |
+| `open` | Open an existing project |
+| `save` | Save the current project |
+| `info` | Show project information |
+| `settings` | View or update project settings |
+| `json` | Print raw project JSON |
 
 
 ### Track
@@ -68,7 +73,10 @@ Track management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a new track |
+| `remove` | Remove a track by index |
+| `list` | List all tracks |
+| `set` | Set a track property (name, mute, solo, volume, pan) |
 
 
 ### Clip
@@ -77,7 +85,13 @@ Clip management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `import` | Probe/import an audio file (show metadata) |
+| `add` | Add an audio clip to a track |
+| `remove` | Remove a clip from a track |
+| `trim` | Trim a clip's start and/or end |
+| `split` | Split a clip at a given time position |
+| `move` | Move a clip to a new start time |
+| `list` | List clips on a track |
 
 
 ### Effect Group
@@ -86,7 +100,12 @@ Effect management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `list-available` | List all available effects |
+| `info` | Show details about an effect |
+| `add` | Add an effect to a track |
+| `remove` | Remove an effect by index |
+| `set` | Set an effect parameter |
+| `list` | List effects on a track |
 
 
 ### Selection
@@ -95,7 +114,10 @@ Selection management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `set` | Set selection range |
+| `all` | Select all (entire project duration) |
+| `none` | Clear selection |
+| `info` | Show current selection |
 
 
 ### Label
@@ -104,7 +126,9 @@ Label/marker management commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `add` | Add a label at a time position |
+| `remove` | Remove a label by index |
+| `list` | List all labels |
 
 
 ### Media
@@ -113,7 +137,8 @@ Media file operations.
 
 | Command | Description |
 |---------|-------------|
-
+| `probe` | Analyze an audio file |
+| `check` | Check that all referenced audio files exist |
 
 
 ### Export Group
@@ -122,7 +147,9 @@ Export/render commands.
 
 | Command | Description |
 |---------|-------------|
-
+| `presets` | List export presets |
+| `preset-info` | Show preset details |
+| `render` | Render the project to an audio file |
 
 
 ### Session Group
@@ -131,6 +158,10 @@ Session management commands.
 
 | Command | Description |
 |---------|-------------|
+| `status` | Show session status |
+| `undo` | Undo the last operation |
+| `redo` | Redo the last undone operation |
+| `history` | Show undo history |
 
 
 
