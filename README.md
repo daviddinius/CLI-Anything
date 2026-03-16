@@ -7,8 +7,8 @@ CLI-Anything: Bridging the Gap Between AI Agents and the World's Software</stron
 
 <p align="center">
   <a href="#-quick-start"><img src="https://img.shields.io/badge/Quick_Start-5_min-blue?style=for-the-badge" alt="Quick Start"></a>
-  <a href="#-demonstrations"><img src="https://img.shields.io/badge/Demos-12_Apps-green?style=for-the-badge" alt="Demos"></a>
-  <a href="#-test-results"><img src="https://img.shields.io/badge/Tests-1%2C508_Passing-brightgreen?style=for-the-badge" alt="Tests"></a>
+  <a href="#-demonstrations"><img src="https://img.shields.io/badge/Demos-13_Apps-green?style=for-the-badge" alt="Demos"></a>
+  <a href="#-test-results"><img src="https://img.shields.io/badge/Tests-1%2C588_Passing-brightgreen?style=for-the-badge" alt="Tests"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"></a>
 </p>
 
@@ -361,7 +361,7 @@ AI agents are great at reasoning but terrible at using real professional softwar
 | 💸 "UI automation breaks constantly" | No screenshots, no clicking, no RPA fragility. Pure command-line reliability with structured interfaces |
 | 📊 "Agents need structured data" | Built-in JSON output for seamless agent consumption + human-readable formats for debugging |
 | 🔧 "Custom integrations are expensive" | One Claude plugin auto-generates CLIs for ANY codebase through proven 7-phase pipeline |
-| ⚡ "Prototype vs Production gap" | 1,518+ tests with real software validation. Battle-tested across 12 major applications |
+| ⚡ "Prototype vs Production gap" | 1,588+ tests with real software validation. Battle-tested across 13 major applications |
 
 ---
 
@@ -450,7 +450,7 @@ All CLIs organized under cli_anything.* namespace — conflict-free, pip-install
 CLI-Anything works on any software with a codebase — no domain restrictions or architectural limitations.
 
 ### 🏭 Professional-Grade Testing
-Tested across 12 diverse, complex applications spanning creative, productivity, communication, diagramming, and AI content generation domains previously inaccessible to AI agents.
+Tested across 13 diverse, complex applications spanning creative, productivity, communication, diagramming, AI image generation, and AI content generation domains previously inaccessible to AI agents.
 
 ### 🎨 Diverse Domain Coverage
 From creative workflows (image editing, 3D modeling, vector graphics) to production tools (audio, office, live streaming, video editing).
@@ -551,12 +551,19 @@ Each application received complete, production-ready CLI interfaces — not demo
 <td align="center">✅ 50</td>
 </tr>
 <tr>
+<td align="center"><strong>🖼️ ComfyUI</strong></td>
+<td>AI Image Generation</td>
+<td><code>cli-anything-comfyui</code></td>
+<td>ComfyUI REST API</td>
+<td align="center">✅ 70</td>
+</tr>
+<tr>
 <td align="center" colspan="4"><strong>Total</strong></td>
-<td align="center"><strong>✅ 1,518</strong></td>
+<td align="center"><strong>✅ 1,588</strong></td>
 </tr>
 </table>
 
-> **100% pass rate** across all 1,518 tests — 1,078 unit tests + 440 end-to-end tests.
+> **100% pass rate** across all 1,588 tests — 1,138 unit tests + 450 end-to-end tests.
 
 ---
 
@@ -585,8 +592,9 @@ zoom           22 passed  ✅   (22 unit + 0 e2e)
 drawio        138 passed  ✅   (116 unit + 22 e2e)
 mermaid        10 passed  ✅   (5 unit + 5 e2e)
 anygen         50 passed  ✅   (40 unit + 10 e2e)
+comfyui        70 passed  ✅   (60 unit + 10 e2e)
 ──────────────────────────────────────────────────────────────────────────────
-TOTAL        1,518 passed  ✅   100% pass rate
+TOTAL        1,588 passed  ✅   100% pass rate
 ```
 
 ---
@@ -646,7 +654,8 @@ cli-anything/
 ├── 📞 zoom/agent-harness/               # Zoom CLI (22 tests)
 ├── 📐 drawio/agent-harness/             # Draw.io CLI (138 tests)
 ├── 🧜 mermaid/agent-harness/            # Mermaid Live Editor CLI (10 tests)
-└── ✨ anygen/agent-harness/             # AnyGen CLI (50 tests)
+├── ✨ anygen/agent-harness/             # AnyGen CLI (50 tests)
+└── 🖼️ comfyui/agent-harness/            # ComfyUI CLI (70 tests)
 ```
 
 Each `agent-harness/` contains an installable Python package under `cli_anything.<software>/` with Click CLI, core modules, utils (including `repl_skin.py` and backend wrapper), and comprehensive tests.
@@ -747,7 +756,7 @@ HARNESS.md is our definitive SOP for making any software agent-accessible via au
 
 It encodes proven patterns and methodologies refined through automated generation processes.
 
-The playbook distills key insights from successfully building all 12 diverse, production-ready harnesses.
+The playbook distills key insights from successfully building all 13 diverse, production-ready harnesses.
 
 ### Critical Lessons
 
@@ -872,7 +881,7 @@ MIT License — free to use, modify, and distribute.
 
 **CLI-Anything** — *Make any software with a codebase Agent-native.*
 
-<sub>A methodology for the age of AI agents | 12 professional software demos | 1,518 passing tests</sub>
+<sub>A methodology for the age of AI agents | 13 professional software demos | 1,588 passing tests</sub>
 
 <br>
 
