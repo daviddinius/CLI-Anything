@@ -72,8 +72,8 @@
       "entry_point": "cli-anything-browser",
       "skill_md": "browser/agent-harness/cli_anything/browser/skills/SKILL.md",
       "category": "web",
-      "contributor": "CLI-Anything-Team",
-      "contributor_url": "https://github.com/HKUDS/CLI-Anything"
+      "contributor": "furkankoykiran",
+      "contributor_url": "https://github.com/furkankoykiran"
     },
     {
       "name": "comfyui",
