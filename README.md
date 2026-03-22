@@ -84,7 +84,7 @@ CLI is the universal interface for both humans and AI agents:
 
 - **Python 3.10+**
 - Target software installed (e.g., GIMP, Blender, LibreOffice, or your own application)
-- A supported AI coding agent: [Claude Code](#-claude-code) | [OpenClaw](#-openclaw) | [OpenCode](#-opencode) | [Codex](#-codex) | [Qodercli](#-qodercli) | [Copilotcli](#-copilotcli) | [More Platforms](#-more-platforms-coming-soon)
+- A supported AI coding agent: [Claude Code](#-claude-code) | [OpenClaw](#-openclaw) | [OpenCode](#-opencode) | [Codex](#-codex) | [Qodercli](#-qodercli) | [GitHub Copilot CLI](#-copilotcli) | [More Platforms](#-more-platforms-coming-soon)
 
 ### Pick Your Platform
 
@@ -329,8 +329,7 @@ OpenCode commands, while keeping the generated Python harness format unchanged.
 
 <details>
 
-<summary><h4 id="-copilotcli">⚡ Copilotcli <sup><code>Community</code></sup></h4></summary>
-
+<summary><h4 id="-copilotcli">⚡ GitHub Copilot CLI <sup><code>Community</code></sup></h4></summary>
 **Step 1: Install the Plugin**
 
 ```bash
@@ -339,7 +338,7 @@ cd CLI-Anything
 copilot plugin install ./cli-anything-plugin
 ```
 
-**Step 2: Use CLI-Anything from Copilotcli**
+**Step 2: Use CLI-Anything from GitHub Copilot CLI**
 
 ```bash
 /cli-anything:cli-anything ./gimp
