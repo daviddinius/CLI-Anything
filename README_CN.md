@@ -279,7 +279,7 @@ Use CLI-Anything to validate ./libreoffice
 
 <details>
 
-<summary><h4 id="-copilotcli">⚡ Github Copilot CLI <sup><code>社区贡献</code></sup></h4></summary>
+<summary><h4 id="-copilotcli">⚡ GitHub Copilot CLI <sup><code>社区贡献</code></sup></h4></summary>
 **第一步：安装插件**
 
 ```bash
