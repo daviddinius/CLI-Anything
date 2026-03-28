@@ -172,3 +172,4 @@ assets/gen_typing_gif.py
 /notebooklm/.*
 !/notebooklm/agent-harness/
 !/intelwatch/agent-harness/
+!/intelwatch/
