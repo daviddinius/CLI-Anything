@@ -22,15 +22,13 @@ def _find_pm2() -> str:
     Raises:
         RuntimeError: If pm2 is not found.
     """
-    # Ensure common paths are in PATH for shutil.which
     extra_paths = ["/opt/homebrew/bin", "/usr/local/bin", "/usr/bin"]
     env_path = os.environ.get("PATH", "")
     for p in extra_paths:
         if p not in env_path:
             env_path = f"{p}:{env_path}"
-    os.environ["PATH"] = env_path
 
-    pm2_path = shutil.which("pm2")
+    pm2_path = shutil.which("pm2", path=env_path)
     if pm2_path is None:
         raise RuntimeError(
             "pm2 not found on this system. "

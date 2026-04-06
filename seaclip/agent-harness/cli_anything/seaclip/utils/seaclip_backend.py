@@ -10,7 +10,6 @@ import requests
 from typing import Any
 
 DEFAULT_BASE_URL = "http://127.0.0.1:5200"
-DEFAULT_DB_PATH = "/Users/whitenoise-oc/shrirama/seaclip-lite/seaclip.db"
 
 
 class SeaClipBackend:
@@ -22,7 +21,7 @@ class SeaClipBackend:
             or os.environ.get("SEACLIP_URL")
             or DEFAULT_BASE_URL
         ).rstrip("/")
-        self.db_path = db_path or os.environ.get("SEACLIP_DB") or DEFAULT_DB_PATH
+        self.db_path = db_path or os.environ.get("SEACLIP_DB")
         self.timeout = timeout
         self.session = requests.Session()
 
@@ -92,6 +91,11 @@ class SeaClipBackend:
 
     def _query_db(self, sql: str, params: tuple = ()) -> list[dict]:
         """Run a read-only query against SeaClip-Lite's SQLite database."""
+        if not self.db_path:
+            raise RuntimeError(
+                "SEACLIP_DB environment variable is required for direct database queries. "
+                "Set it to the path of your SeaClip-Lite seaclip.db file."
+            )
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
         try:
