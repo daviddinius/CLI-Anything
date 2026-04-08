@@ -76,6 +76,17 @@ def generate_tone(
     }
 
 
+ALLOWED_SOX_EFFECTS = frozenset({
+    "bass", "chorus", "compand", "contrast", "dcshift", "delay",
+    "echo", "echos", "equalizer", "fade", "firfit", "flanger",
+    "gain", "highpass", "hilbert", "loudness", "lowpass", "mcompand",
+    "noiseprof", "noisered", "norm", "oops", "overdrive", "pad",
+    "phaser", "pitch", "rate", "remix", "repeat", "reverb", "reverse",
+    "silence", "sinc", "speed", "splice", "stat", "stats", "stretch",
+    "swap", "tempo", "treble", "tremolo", "trim", "vol",
+})
+
+
 def apply_effect(
     input_path: str,
     output_path: str,
@@ -91,6 +102,18 @@ def apply_effect(
     """
     if not os.path.exists(input_path):
         raise FileNotFoundError(f"Input file not found: {input_path}")
+
+    if not effects:
+        raise ValueError("No effects specified")
+
+    # Validate the first token (effect name) against allowlist.
+    # Subsequent tokens are numeric parameters for that effect.
+    effect_name = effects[0].lower()
+    if effect_name not in ALLOWED_SOX_EFFECTS:
+        raise ValueError(
+            f"Disallowed sox effect: '{effect_name}'. "
+            f"Allowed: {sorted(ALLOWED_SOX_EFFECTS)}"
+        )
 
     sox = find_sox()
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
