@@ -46,6 +46,25 @@ designed for humans, without needing a display or mouse.
    - Machine-readable (JSON) for agent consumption
    - Both, controlled by `--json` flag
 
+### MANDATORY: Read SECURITY.md Before Implementation
+
+**Before starting Phase 3, read [`../SECURITY.md`](../SECURITY.md).** It defines the
+threat model for CLI-Anything harnesses and contains mandatory security rules for
+all subprocess calls, script generation, and file handling. Every harness builder
+MUST follow these rules — they are non-negotiable.
+
+**Security Checklist (gate for Phase 3):**
+
+- [ ] I have read SECURITY.md and understand the threat model
+- [ ] All `subprocess.run()` calls use list arguments, **never `shell=True`**
+- [ ] All user-controlled arguments are validated against an allowlist before
+      passing to subprocess (codec names, format strings, filter params)
+- [ ] User-controlled strings are escaped before embedding in scripts
+      (Script-Fu, Python, Lua) or structured formats (XML, SVG, HTML)
+- [ ] File paths use `os.path.abspath()` to prevent path traversal
+- [ ] API keys and credentials are never logged or included in JSON output
+- [ ] No `os.system()`, `eval()`, or `exec()` is used anywhere in the harness
+
 ### Phase 3: Implementation
 
 1. **Start with the data layer** — XML/JSON manipulation of project files
